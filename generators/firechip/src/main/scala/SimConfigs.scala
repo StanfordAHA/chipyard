@@ -17,7 +17,12 @@ import firesim.configs._
 * reconstruct what is in a particular AGFI. These tags are also used to
 * determine which driver to build.
 *******************************************************************************/
-class FireSimConfig extends Config(new BasePlatformConfig)
+class FireSimConfig extends Config(
+  new WithAsyncResetReplacement ++
+  new WithPlusArgReaderRemoval ++
+  new WithILATopWiringTransform ++
+  new WithEC2F1Artefacts ++
+  new BasePlatformConfig)
 
 class FireSimClockDivConfig extends Config(
   new FireSimConfig)
