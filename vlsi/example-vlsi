@@ -8,8 +8,8 @@ from typing import Dict, Callable, Optional, List
 
 def example_place_tap_cells(x: hammer_vlsi.HammerTool) -> bool:
     x.append('''
-# TODO
-# Place custom TCL here
+set_db add_well_taps_cell TAPCELL_ASAP7_75t_L
+add_well_taps -cell_interval 50 -in_row_offset 10.564
 ''')
     return True
 
