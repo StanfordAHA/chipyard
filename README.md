@@ -1,7 +1,7 @@
 # Chipyard Framework [![CircleCI](https://circleci.com/gh/ucb-bar/chipyard/tree/master.svg?style=svg)](https://circleci.com/gh/ucb-bar/chipyard/tree/master)
 
 ## Accessing Hammer Tutorial
-Check out the `stanford-asap7-demo` branch, and follow the instructions [here]<https://github.com/StanfordAHA/chipyard/blob/stanford-asap7-demo/docs/VLSI/Tutorial.rst>
+Check out the `stanford-asap7-demo` branch, and follow the instructions [here](https://github.com/StanfordAHA/chipyard/blob/stanford-asap7-demo/docs/VLSI/Tutorial.rst)
 
 ## Using Chipyard
 
