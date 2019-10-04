@@ -122,12 +122,14 @@ vlsi.core.sram_generator_tool_path_meta: "append"
 vlsi.core.synthesis_tool: "genus"
 vlsi.core.synthesis_tool_path: ["hammer-cadence-plugins/synthesis"]
 vlsi.core.synthesis_tool_path_meta: "append"
-synthesis.genus.version: "1813"
+synthesis.genus.version: "17.21.000.lnx86"
+synthesis.genus.genus_bin: "${cadence.cadence_home}/GENUS${synthesis.genus.version}/bin/genus"
 # Innovus options
 vlsi.core.par_tool: "innovus"
 vlsi.core.par_tool_path: ["hammer-cadence-plugins/par"]
 vlsi.core.par_tool_path_meta: "append"
-par.innovus.version: "181"
+par.innovus.version: "17.12.000.lnx86"
+par.innovus.innovus_bin: "${cadence.cadence_home}/INNOVUS${par.innovus.version}/bin/innovus"
 par.innovus.design_flow_effort: "standard"
 par.inputs.gds_merge: true
 # Calibre options
