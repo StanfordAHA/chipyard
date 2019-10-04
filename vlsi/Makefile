@@ -33,7 +33,7 @@ VLSI_TOP           ?= $(TOP)
 # Tutorial overrides
 VLSI_TOP           := Sha3AccelwBB
 CONFIG             := Sha3RocketConfig
-MACROCOMPILER_MODE := '--mode synflops'
+MACROCOMPILER_MODE := --mode synflops
 
 #########################################################################################
 # general rules
