@@ -30,6 +30,11 @@ INPUT_CONFS        ?= example.yml
 HAMMER_EXEC        ?= ./example-vlsi
 VLSI_TOP           ?= $(TOP)
 
+# Tutorial overrides
+VLSI_TOP           := Sha3AccelwBB
+CONFIG             := Sha3RocketConfig
+MACROCOMPILER_MODE := '--mode synflops'
+
 #########################################################################################
 # general rules
 #########################################################################################
