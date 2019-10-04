@@ -54,7 +54,7 @@ Prerequisites
 * Genus, Innovus, and Calibre licenses
 * For ASAP7 specifically:
 
-  * Download the `ASAP7 PDK <http://asap.asu.edu/asap/>`__ tarball to a directory of choice but do not extract it. The tech plugin will extract and setup the PDK for you into a cache directory. (Stanford: tarball under /cad/asap7)
+  * Download the `ASAP7 PDK <http://asap.asu.edu/asap/>`__ tarball to a directory of choice but do not extract it. The tech plugin will extract and setup the PDK for you into a cache directory. (Stanford: tarball already cad /cad/asap7/ASAP7_PDKandLIB.tar)
   * If you have additional ASAP7 hard macros, their LEF & GDS need to be 4x upscaled @ 4000 DBU precision. They may live outside ``extra_libraries`` at your discretion.
   * Innovus version must be >= 15.2 or <= 18.1 (ISRs excluded).
 
@@ -130,6 +130,7 @@ Timing reports are found in ``build/par-rundir/timingReports``. They are gzipped
 
 DRC & LVS
 ^^^^^^^^^
+(Stanford: Can't do this part just yet. We need to get the Mentor plugin first.)
 To run DRC & LVS, and view the results in Calibre:
 
 .. code-block:: shell
