@@ -64,7 +64,8 @@ In the Chipyard root, run:
 
 .. code-block:: shell
 
-    ``./scripts/init-vlsi.sh asap7`` 
+    ./scripts/init-vlsi.sh asap7
+    ./scripts/init-submodules-no-riscv-tools.sh
     
 to pull the Hammer & plugin submodules. Note that for technologies other than ``asap7``, the tech submodule must be added in the ``vlsi`` folder first.
 
