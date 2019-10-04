@@ -32,9 +32,8 @@ git config --unset submodule.vlsi/hammer-mentor-plugins.update
 # Renable firesim and init only the required submodules to provide
 # all required scala deps, without doing a full build-setup
 git config --unset submodule.sims/firesim.update
-cd "${scripts_dir}/../sims"
-git submodule update --init firesim
-cd firesim/sim
-git submodule update --init midas
+git submodule update --init sims/firesim
+cd "${scripts_dir}/../sims/firesim"
+git submodule update --init sim/midas
 cd "$RDIR"
 git config submodule.sims/firesim.update none
