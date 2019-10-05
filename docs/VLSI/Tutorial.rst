@@ -54,7 +54,7 @@ Prerequisites
 * Genus, Innovus, and Calibre licenses
 * For ASAP7 specifically:
 
-  * Download the `ASAP7 PDK <http://asap.asu.edu/asap/>`__ tarball to a directory of choice but do not extract it. The tech plugin will extract and setup the PDK for you into a cache directory.
+  * Download the `ASAP7 PDK <http://asap.asu.edu/asap/>`__ tarball to a directory of choice but do not extract it. The tech plugin will extract and setup the PDK for you into a cache directory. (Stanford: tarball already at /cad/asap7/ASAP7_PDKandLIB.tar)
   * If you have additional ASAP7 hard macros, their LEF & GDS need to be 4x upscaled @ 4000 DBU precision. They may live outside ``extra_libraries`` at your discretion.
   * Innovus version must be >= 15.2 or <= 18.1 (ISRs excluded).
 
@@ -64,7 +64,8 @@ In the Chipyard root, run:
 
 .. code-block:: shell
 
-    ``./scripts/init-vlsi.sh asap7`` 
+    ./scripts/init-vlsi.sh asap7
+    ./scripts/init-submodules-no-riscv-tools.sh
     
 to pull the Hammer & plugin submodules. Note that for technologies other than ``asap7``, the tech submodule must be added in the ``vlsi`` folder first.
 
@@ -82,7 +83,9 @@ To elaborate the ``Sha3RocketConfig`` (Rocket Chip w/ the accelerator) and set u
 
 .. code-block:: shell
 
-    make buildfile MACROCOMPILER_MODE='--mode synflops' CONFIG=Sha3RocketConfig VLSI_TOP=Sha3AccelwBB
+    make buildfile
+
+The following variables have been overridden in the Makefile for the purposes of this tutorial:
 
 The ``MACROCOMPILER_MODE='--mode synflops'`` is needed because the ASAP7 process does not yet have a memory compiler. Therefore, flip-flop arrays are used instead. Note this will dramatically increase synthesis runtimes if your design has a lot of caches.
 
@@ -111,7 +114,7 @@ Synthesis
 ^^^^^^^^^
 .. code-block:: shell
 
-    ``make syn``
+    make syn
 
 Post-synthesis logs and collateral are in ``build/syn-rundir``. The raw QoR data is available at ``build/syn-rundir/reports``, and methods to extract this information for design space exploration are a WIP.
 
@@ -119,7 +122,7 @@ Place-and-Route
 ^^^^^^^^^^^^^^^
 .. code-block:: shell
 
-    ``make par``
+    make par
 
 After completion, the final database can be opened in an interactive Innovus session via ``./build/par-rundir/generated-scripts/open_chip``.
 
@@ -129,6 +132,7 @@ Timing reports are found in ``build/par-rundir/timingReports``. They are gzipped
 
 DRC & LVS
 ^^^^^^^^^
+(Stanford: Can't do this part just yet. We need to get the Mentor plugin first.)
 To run DRC & LVS, and view the results in Calibre:
 
 .. code-block:: shell
